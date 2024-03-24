@@ -1,5 +1,5 @@
 [versions]
-agp = "8.3.0"
+agp = "8.3.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
@@ -10,6 +10,7 @@ constraintlayout = "2.1.4"
 cardview = "1.0.0"
 recyclerview = "1.4.0-alpha01"
 percent = "28.0.0"
+circleimageview = "3.1.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -22,6 +23,7 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
 recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 percent = { group = "com.android.support", name = "percent", version.ref = "percent" }
+circleimageview = { group = "de.hdodenhof", name = "circleimageview", version.ref = "circleimageview" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
