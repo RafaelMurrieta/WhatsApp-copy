@@ -5,4 +5,5 @@
     <color name="mainColor">#027763</color>
     <color name="colorStatusBar">#FF0000</color>
     <color name="colorPrimaryDark">#027763</color>
+    <color name="checkedGray">#E9ECF2</color>
 </resources>
