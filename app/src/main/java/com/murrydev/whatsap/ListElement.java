@@ -1,17 +1,33 @@
 package com.murrydev.whatsap;
 
 public class ListElement {
-    public String name,profile,msg,checked,dates,alertMsg;
+    public String name;
+    public String profile;
+    public String msg;
+    public String checked;
+    public String dates;
+    public String alertMsg;
 
-    public ListElement(String name, String profile, String msg, String checked, String dates, String alertMsg) {
+
+
+    public String setImg;
+
+    public ListElement() {
+    }
+
+    public ListElement(String name, String profile, String msg, String checked, String dates, String alertMsg,String setImg) {
         this.name = name;
         this.profile = profile;
         this.msg = msg;
         this.checked = checked;
         this.dates = dates;
         this.alertMsg = alertMsg;
+        this.setImg = setImg;
     }
 
+    public String getSetImg() {return setImg;}
+
+    public void setSetImg(String setImg) {this.setImg = setImg;}
     public String getName() {
         return name;
     }

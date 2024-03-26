@@ -1,14 +1,19 @@
 package com.murrydev.whatsap;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -38,7 +43,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView profilePhoto, statusMsg;
+        ImageView profilePhoto, statusMsg,setImg;
         TextView nametxt, time, msg, numbermsj;
 
         ViewHolder(View itemView){
@@ -49,20 +54,42 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             msg = itemView.findViewById(R.id.msjTextView);
             numbermsj = itemView.findViewById(R.id.numberMnsj);
             statusMsg = itemView.findViewById(R.id.check);
+            setImg = itemView.findViewById(R.id.set);
         }
 
+
         void onBind(final ListElement item){
+            Log.d("ListElementItem", String.valueOf(item));
             int resourceId = context.getResources().getIdentifier(item.getProfile(), "drawable", context.getPackageName());
             if (resourceId != 0) {
                 profilePhoto.setImageResource(resourceId);
             } else {
                 profilePhoto.setImageResource(R.mipmap.defecto_imga);
             }
+            String alrtMsj = item.getAlertMsg();
+            if ("set".equals(alrtMsj)) {
+                Drawable drawable = ContextCompat.getDrawable(itemView.getContext(), R.drawable.setmsj);
+                numbermsj.setBackground(drawable);
+                int widthPixels = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, itemView.getResources().getDisplayMetrics());
+                int heightPixels = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, itemView.getResources().getDisplayMetrics());
+                numbermsj.getLayoutParams().width = widthPixels;
+                numbermsj.getLayoutParams().height = heightPixels;
+                numbermsj.requestLayout();
+                setImg.setVisibility(View.GONE);
+            } else if(alrtMsj == null){
+                numbermsj.setVisibility(View.GONE);
+                statusMsg.setVisibility(View.GONE);
+            }else{
+                numbermsj.setText(alrtMsj);
+            }
+            String imgeset = item.getSetImg();
+            if (imgeset == null){
+                setImg.setVisibility(View.GONE);
+            }
+            statusMsg.setColorFilter(Color.parseColor(item.getChecked()), PorterDuff.Mode.SRC_IN);
             nametxt.setText(item.getName());
             time.setText(item.getDates());
             msg.setText(item.getMsg());
-            numbermsj.setText(item.getAlertMsg());
-            statusMsg.setColorFilter(Color.parseColor(item.getChecked()), PorterDuff.Mode.SRC_IN);
         }
 
     }

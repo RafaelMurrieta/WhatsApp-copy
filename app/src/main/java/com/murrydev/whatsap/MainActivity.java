@@ -55,18 +55,18 @@ public class MainActivity extends AppCompatActivity {
 
     public  void init(){
         elements = new ArrayList<>();
-        elements.add(new ListElement("Rafael", "@drawable/profile1", "Hola, como estas? 👍🏻","#A8A9AB","12:12 am","2"));
-        elements.add(new ListElement("Rafael", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","2"));
-        elements.add(new ListElement("Rafael", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","2"));
-        elements.add(new ListElement("Rafael", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","2"));
-        elements.add(new ListElement("Rafael", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","2"));
-        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am","2"));
-        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am","2"));
-        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am","2"));
-        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am","2"));
-        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am","2"));
-        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am","2"));
-        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am","2"));
+        elements.add(new ListElement("Amoicito 🤎", "@drawable/profile1", "Hola, como estas? 👍🏻","#A8A9AB","12:12 am","set", "setChat"));
+        elements.add(new ListElement("Mom ♥", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","2", "setChat"));
+        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am","2","setChat"));
+        elements.add(new ListElement("Rafael", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","set",null));
+        elements.add(new ListElement("Rafael", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","2",null));
+        elements.add(new ListElement("Rafael", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","2",null));
+        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am",null,null));
+        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am",null,null));
+        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am",null,null));
+        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am",null,null));
+        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am",null,null));
+        elements.add(new ListElement("Rafael", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am","2",null));
         ListAdapter listAdapter = new ListAdapter(elements,this);
         RecyclerView recyclerView = findViewById(R.id.chatsP);
         recyclerView.setHasFixedSize(true);

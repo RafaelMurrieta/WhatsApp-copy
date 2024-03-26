@@ -181,13 +181,13 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="24dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_width="63dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/rectangulo"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/mdimessageplus" />
 

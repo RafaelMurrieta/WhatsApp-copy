@@ -75,30 +75,43 @@
                         android:id="@+id/check"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_marginTop="3dp"
+                        android:layout_marginTop="4dp"
                         android:paddingRight="3dp"
                         android:src="@drawable/check" />
 
                     <TextView
                         android:id="@+id/msjTextView"
-                        android:layout_width="279dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:layout_marginRight="7dp"
-                        android:layout_toLeftOf="@+id/numberMnsj"
+                        android:layout_toLeftOf="@+id/set"
+                        android:maxLines="1"
+                        android:ellipsize="end"
                         android:layout_toRightOf="@id/check"
                         android:text="Este es un mensaje largo que ocupa todo el "
                         android:textSize="14sp" />
 
+                    <ImageView
+                        android:id="@+id/set"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="36dp"
+                        android:background="@drawable/setmsj"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/white" />
+
                     <TextView
                         android:id="@+id/numberMnsj"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="13dp"
                         android:background="@drawable/circule_form"
                         android:gravity="center"
-                        android:text="1"
+                        android:text=""
                         android:textColor="@color/white" />
                 </RelativeLayout>
             </LinearLayout>
