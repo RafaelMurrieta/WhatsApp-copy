@@ -27,8 +27,7 @@
                 android:layout_gravity="center"
                 android:layout_marginStart="11dp"
                 android:layout_marginLeft="11dp"
-                android:layout_marginTop="25dp"
-                app:srcCompat="@drawable/profile1"/>
+                android:layout_marginTop="25dp"/>
 
             <LinearLayout
                 android:id="@+id/linearlyout"
@@ -113,8 +112,9 @@
                         android:layout_marginRight="13dp"
                         android:background="@drawable/circule_form"
                         android:gravity="center"
+                        android:textSize="10sp"
                         android:textStyle="bold"
-                        android:text="2"
+                        android:text=""
                         style="@style/textAlerte" />
                 </RelativeLayout>
             </LinearLayout>

@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         elements = new ArrayList<>();
         elements.add(new ListElement("Amoicito 🤎", "@drawable/profile1", " Hola, como estas? 👍🏻","#A8A9AB","12:12 am","set", "setChat"));
         elements.add(new ListElement("familia loca", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","2","setChat"));
-        elements.add(new ListElement("Mom ♥", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","2", "setChat"));
+        elements.add(new ListElement("Mom ♥", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","1", "setChat"));
         elements.add(new ListElement("Antonio", "", "Este es un mensaje largo que ocupa todo el espa...","#5E96D7","12:12 am","2","setChat"));
         elements.add(new ListElement("Edgar", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","set",null));
         elements.add(new ListElement("Sister 🖤", "@drawable/profile1", "Hola, como estas?","#5E96D7","12:12 am","2",null));

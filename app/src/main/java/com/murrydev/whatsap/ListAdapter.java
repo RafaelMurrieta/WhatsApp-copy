@@ -2,6 +2,7 @@ package com.murrydev.whatsap;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -58,8 +59,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         }
 
 
+        @SuppressLint("ResourceAsColor")
         void onBind(final ListElement item){
             Log.d("ListElementItem", String.valueOf(item));
+            time.setText(item.getDates());
             int resourceId = context.getResources().getIdentifier(item.getProfile(), "drawable", context.getPackageName());
             if (resourceId != 0) {
                 profilePhoto.setImageResource(resourceId);
@@ -80,7 +83,12 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
                 numbermsj.setVisibility(View.GONE);
                 statusMsg.setVisibility(View.GONE);
             }else{
+                TypedArray typedArray = context.obtainStyledAttributes(new int[]{R.attr.ovaloColorMsg});
+                int msjcol = typedArray.getColor(0,0);
+                typedArray.recycle();
+                time.setTextColor(msjcol);
                 numbermsj.setText(alrtMsj);
+
             }
             String imgeset = item.getSetImg();
             if (imgeset == null){
@@ -88,7 +96,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             }
             statusMsg.setColorFilter(Color.parseColor(item.getChecked()), PorterDuff.Mode.SRC_IN);
             nametxt.setText(item.getName());
-            time.setText(item.getDates());
             msg.setText(item.getMsg());
         }
 
