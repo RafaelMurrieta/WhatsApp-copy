@@ -1,7 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Whatsap" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="barcolor">@color/colorPrimaryDark</item>
+        <item name="background">@color/backgroundChat</item>
+        <item name="msjTint">@color/black</item>
+        <item name="ovaloColor">@color/checkedGrayDark</item>
+        <item name="ovaloTint">@color/checkedGray</item>
+        <item name="ovaloColorMsg">@color/msgDark</item>
+        <item name="buttonmsj">@color/msgDark</item>
     </style>
+    <style name="textdate">
+        <item name="android:textColor">@color/textGray</item>
+    </style>
+    <style name="textAlerte">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="TextName">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="navbrarDown">
+        <item name="android:background">@color/colorPrimaryDark</item>
+    </style>
+
 </resources>

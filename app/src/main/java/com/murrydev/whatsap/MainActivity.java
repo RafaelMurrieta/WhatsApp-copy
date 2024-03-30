@@ -2,9 +2,11 @@ package com.murrydev.whatsap;
 
 import static com.murrydev.whatsap.R.color.*;
 
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,10 +38,22 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-            getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-            getWindow().setTitleColor(ContextCompat.getColor(this, R.color.white));
-            iconMsg = findViewById(R.id.iconMsgChat);
-            iconMsg.setColorFilter(ContextCompat.getColor(this, R.color.black), PorterDuff.Mode.SRC_IN);
+        TypedArray barC = obtainStyledAttributes(new int[]{R.attr.barcolor});
+        int barTint = barC.getColor(0, 0);
+        barC.recycle();
+        getWindow().setStatusBarColor(barTint);
+
+        TypedArray typedArray = obtainStyledAttributes(new int[]{R.attr.ovaloTint});
+        int ovaloTint = typedArray.getColor(0, 0);
+        typedArray.recycle();
+        ImageView iconMsgChat = findViewById(R.id.iconMsgChat);
+        iconMsgChat.setColorFilter(ovaloTint);
+
+        TypedArray typedArray1 = obtainStyledAttributes(new int[]{R.attr.msjTint});
+        int msjfill = typedArray1.getColor(0,0);
+        typedArray1.recycle();
+        ImageView iconMsgChatfondo = findViewById(R.id.imageButton);
+        iconMsgChatfondo.setColorFilter(msjfill);
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

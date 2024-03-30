@@ -2,8 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="mainColor">#027763</color>
+    <color name="colorPrimary">#027763</color>
     <color name="colorStatusBar">#FF0000</color>
-    <color name="colorPrimaryDark">#027763</color>
+    <color name="colorPrimaryDark">#172C33</color>
+    <color name="textGray">#919191</color>
+    <color name="alertColor">#25D366</color>
+    <color name="backgroundChat">#101D25</color>
+    <color name="textMsjDark">#94999C</color>
+    <color name="darkSelection">#2C525E</color>
+    <color name="selection">#aaa</color>
+    <color name="msgDark">#128C7E</color>
+    <color name="msjbtn">#015A4B</color>
     <color name="checkedGray">#E9ECF2</color>
+    <color name="checkedGrayDark">#325661</color>
 </resources>

@@ -10,7 +10,7 @@
         android:id="@+id/navbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#027763"
+        android:background="?attr/colorPrimary"
         android:orientation="horizontal"
         tools:ignore="MissingConstraints">
 
@@ -39,17 +39,19 @@
                 android:layout_height="25dp"
                 android:background="@drawable/materialsymbolssearch">
             </ImageView>
+
             <ImageView
                 android:layout_marginLeft="20dp"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:background="@drawable/menu">
             </ImageView>
+
         </LinearLayout>
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:background="@color/white"
+        android:background="?attr/background"
         android:id="@+id/chatsP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,7 +64,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@color/white"
+        style="@style/navbrarDown"
         android:elevation="4dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,7 +83,6 @@
                 android:layout_height="25dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/ovaleform"
-                android:backgroundTint="@color/checkedGray"
                 android:src="@drawable/mdiandroidmessages" />
 
             <TextView
@@ -126,7 +127,7 @@
                 android:layout_marginTop="5dp"
                 android:text="Novedades"
                 android:textAlignment="center"
-                android:textColor="#919191"
+                android:textColor="@color/textGray"
                 android:textSize="14dp"
                 android:textStyle="bold"></TextView>
         </LinearLayout>
@@ -149,7 +150,7 @@
                 android:layout_marginTop="5dp"
                 android:text="Comunidades"
                 android:textAlignment="center"
-                android:textColor="#919191"
+                android:textColor="@color/textGray"
                 android:textSize="14dp"
                 android:textStyle="bold"></TextView>
         </LinearLayout>
@@ -172,7 +173,7 @@
                 android:layout_marginTop="5dp"
                 android:text="Llamadas"
                 android:textAlignment="center"
-                android:textColor="#919191"
+                android:textColor="@color/textGray"
                 android:textSize="14dp"
                 android:textStyle="bold"></TextView>
         </LinearLayout>

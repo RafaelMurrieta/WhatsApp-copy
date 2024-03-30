@@ -1,10 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Whatsap" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">#027763</item>
+    <style name="Base.Theme.Whatsap" parent="Theme.Material3.DayNight.NoActionBar" >
+        <item name="barcolor">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="background">@color/white</item>
+        <item name="ovaloColor">@color/checkedGray</item>
+        <item name="ovaloTint">@color/checkedGrayDark</item>
+        <item name="msjTint">@color/white</item>
+        <item name="ovaloColorMsg">@color/alertColor</item>
+        <item name="buttonmsj">@color/colorPrimary</item>
+    </style>
+    <style name="textdate">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="textAlerte">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TextName">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="navbrarDown">
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name="sectionSelect">
+        <item name="android:background">#E6ECFF</item>
     </style>
 
-    <style name="Theme.Whatsap" parent="Base.Theme.Whatsap" />
 </resources>

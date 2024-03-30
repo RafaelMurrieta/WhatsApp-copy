@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTheme">
+        <attr name="barcolor" format="color"/>
+        <attr name="ovaloTint" format="color" />
+        <attr name="ovaloColor" format="color" />
+        <attr name="ovaloColorMsg" format="color"/>
+        <attr name="buttonmsj" format="color"/>
+        <attr name="msjTint" format="color"/>
+    </declare-styleable>
+</resources>
